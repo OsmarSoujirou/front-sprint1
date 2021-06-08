@@ -1,0 +1,25 @@
+
+ @mixin for-phone-only { @media (max-width: 767.98px){ @content;} }
+ @mixin for-tablet-only { @media (min-width: 768px) and (max-width: 1199.98px) { @content;} }
+ @mixin for-desktop-only { @media (min-width: 1200px){ @content;} }
+ 
+.mobile{
+  @include for-phone-only {   display: inherit !important;   }
+  @include for-tablet-only {   display: none !important;   }
+  @include for-desktop-only {   display: none !important;   }
+}
+.tablet{
+  @include for-phone-only {   display: none !important;   }
+  @include for-tablet-only {   display: inherit !important;  }
+  @include for-desktop-only {   display: none !important;   }
+}
+.desktop{
+  @include for-phone-only {   display: none !important;   }
+  @include for-tablet-only {   display: none !important;   }
+  @include for-desktop-only {   display: inherit !important;   }
+}
+.mobile-tablet{
+  @include for-phone-only {   display: inherit !important;   }
+  @include for-tablet-only {   display: inherit !important;  }
+  @include for-desktop-only {   display: none !important;   }
+}
