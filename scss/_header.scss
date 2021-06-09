@@ -5,15 +5,24 @@
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid rgb(224, 224, 224);
-    @include for-phone-only {padding-bottom: 8px;}
-    @include for-tablet-only {padding-bottom: 8px;}    
-    
+    background: #fff;
+    @include for-phone-only {
+      position: fixed;
+      z-index: 9999;
+      top: 0px;
+      padding-bottom: 8px;      
+    }
+    @include for-tablet-only {
+      padding-bottom: 8px;
+    }    
+    .disabled {
+      display: none;
+    }
     &__logo {
     justify-content: center;
     height: 60px;
     align-items: center;
-      &__img {
-        
+      &__img {        
         @include for-phone-only {   height: 15px;   }
         @include for-tablet-only {   height: 18px;   }
         @include for-desktop-only { height: 21px; }
@@ -23,7 +32,7 @@
         left: 6%;
         cursor: pointer;
         & > img {
-          width: 25px;        
+          width: 2rem;        
           filter: invert(30%) sepia(1%) saturate(1549%) hue-rotate(33deg) brightness(88%) contrast(79%);
      
         } 
@@ -33,7 +42,7 @@
           content: "menu";
           display: block;
           position: absolute;
-          font-size: 9px;
+          font-size: 0.7rem;
           color: #4F4F4F;
         }
     }

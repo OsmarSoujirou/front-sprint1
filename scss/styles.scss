@@ -1,147 +1,125 @@
 
- @import "base", "responsive", "header";
+ @import "base", "responsive", "header", "main";
 
-.main {
-  width: 100%;
+.footer {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 100%;  
+  box-sizing: border-box;
+  border-top: 3px solid #E0E0E0;
+  margin-top: 1.5rem;
+  padding-top: 16px;
+ 
 
- &__container {
-  width: 83%;
+  &__firstline{
+    display: flex;    
+    align-items: center;
+    width: 91.4%;
+    height: 35px;
+    justify-content: space-between;
+    &__offers{
+      width: 70%;
+      justify-content: flex-start;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
 
-    &__breadcrumbs {        
-        padding: 1rem 0;
-        color: #1a1a1a;     
-        font-size: 0.78rem;
-        font-family: "Arboria-import", sans-serif;
+      & p {
+        height: 35px;
+        line-height: 35px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-size: 0.8125rem;
         font-weight: 600;
-        line-height: 1.5;
-        
-        & nav ol {
-          margin: 0;
-          display: flex;
-          padding: 0;
-          flex-wrap: wrap;
-          list-style: none;
-          align-items: center;
-
-          & li {
-            margin-right: 15px; 
-            &:not(:last-child):after{
-              content: " /";
-              position: relative;
-              left: 6px;
-            }
-            & a {          
-              color: #575656;   
-            }
-            & a:hover {          
-              border-bottom: 1px solid #111111;  
-            }           
-          }
-        }    
-    }
-
-    &__filters{
-      border-bottom: 1px solid #e0e0e0;
-      border-top: 1px solid #e0e0e0;
-      
-      & ul {        
-          font-size: 0.7rem;
-          text-transform: uppercase;
-          display: flex;          
-          flex-wrap: wrap;
-          list-style: none;
-          align-items: center;
-
-          & li{        
-            padding: 15.5px 10px;
-            padding-right: 21.5px;
-            cursor: pointer;
-            &:hover{
-              background: rgb(241, 241, 241);
-            }
-            &::after{        
-              content: "˅";
-              font-size: 1rem;
-              font-weight: 600;
-              position: relative;
-              left: 15px;
-              bottom: -5.5px;
-              font-family: monospace;
-            }
-    
-          }
+        margin-right: 1rem;
       }
-      
-      
 
-    }
-
-    &__products{
-      width: calc(100% + 16px);
-      margin: -8px;
-      & ol {       
-        display: flex;          
-        flex-wrap: wrap;
-        list-style: none;
-        align-items: center;
-        justify-content: space-between;
-        width: calc(100% + 16px);
-        margin: -8px;
-      & li {
-        flex-grow: 0;
-        max-width: 25%;
-        flex-basis: 25%;
-        padding: 8px;
-        box-sizing: border-box;  
+      &__form {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
         
-        & div {
-          width: 100%;
+        &__input{
           display: flex;
-          position: relative;
-          margin-top: 16px;
           align-items: center;
-          flex-direction: column;
-          justify-content: flex-start;          
-          overflow: hidden;
-          border: 1px solid rgb(255, 255, 255);
-          box-sizing: border-box;  
-          &:hover{
-            border: 1px solid rgb(241, 241, 241);
-            border-bottom: 1px solid rgb(26, 26, 26);
-            }
-          & img {
-            max-width: 100%;
-            min-width: 200px;
+          border-bottom: 1px inset #ccc;
+          box-sizing: border-box;
+          margin-right: 1rem;
             
+          &:hover{             
+            border-bottom: 1px inset rgb(54, 54, 54);
+          }
+          &:focus-within{             
+            border-bottom: 1px inset rgb(54, 54, 54);
+          }
+          &:nth-child(2):after {
+            content: "@";
+            color: rgb(34, 34, 34);           
+            top: 0px;
+            left: 0px;
+            font-size: 0.8rem;
+            position: relative;             
+            font-weight: 600;        
           }
 
-          & p {
-            color: rgba(0, 0, 0, 0.87);
-            margin-top: 8px;
-            min-height: 30px;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 0.8125rem;            
-            font-family: "Arboria-import", sans-serif;
+          & input {
+            border: none;            
+            outline: none;      
+            font-size: 0.9rem;
+            width: 12rem;                
+            background: transparent;
+            padding: 0;
+            font-family: "Arboria-import", sans-serif; 
             font-weight: 600;
-            line-height: 1.43;
-            &:nth-child(2) {
-              color: rgb(102, 101, 101) !important;
-              font-size: 0.6875rem;
-              font-weight: 500;
-            }
+            &:active{border: none;}
+            &:focus{ border: none;}
           }
-         
-
+          & select {
+            border: none;            
+            outline: none;      
+            font-size: 0.9rem;
+            width: 6rem;                
+            background: transparent;            
+            padding: 0;
+            font-family: "Arboria-import", sans-serif; 
+            font-weight: 600;
+            color: rgb(99, 99, 99);
+            &:active{border: none;}
+            &:focus{ border: none;}
+          }
         }
-      }  
-
-
+        & button {
+          text-transform: uppercase;
+          cursor: default;
+          pointer-events: none;
+          border: transparent;
+          border-radius: 4px;
+          box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+          font-size: 0.9rem;
+          padding: 0.4rem 0.9rem;
+          color: #fff;
+          background: #000;
+          font-family: "Arboria-import", sans-serif; 
+          font-weight: 600;  
+        }
+      }
     }
+    &__mobile-apps{
+      width: 35%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      height: 100%;
+      
+      & img {
+        height: 100%;        
+      }
+
     }
   }
 }
