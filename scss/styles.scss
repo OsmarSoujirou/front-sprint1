@@ -13,11 +13,10 @@
  
 
   &__firstline{
-    display: flex;    
-    align-items: center;
-    width: 91.4%;
+    display: flex;
+    width: 100%;
     height: 35px;
-    justify-content: space-between;
+    justify-content: center;
     &__offers{
       width: 70%;
       justify-content: flex-start;
@@ -120,6 +119,82 @@
         height: 100%;        
       }
 
+    }
+  }
+
+  &__secondline {
+    margin-top: 1.8rem;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    width: 100%;
+    display: flex;
+    background: rgb(241, 241, 241);
+    justify-content: center;
+  
+    &__contacts {      
+      height: 100%;
+      font-size: 0.75rem; 
+      font-weight: 600;
+      width: 22%;
+      display: flex;
+      flex-grow: 0;      
+      flex-basis: 22%;
+      flex-direction: row;
+      flex-wrap: wrap;      
+      border-right: 1px solid #ccc;
+      box-sizing: border-box;  
+      & div {
+        width: 50%;
+        display: flex;            
+        flex-direction: column;
+        align-items: center;        
+        
+        & img {
+          height: 25px !important;
+        }
+        & p {
+          text-align: center;
+          padding: 8px;
+          white-space: pre-line;
+          line-height: 1.2rem;
+        }
+      }
+    }
+    &__links {
+      width: 72%;
+      flex-basis: 72%;
+      margin-top: 3rem;      
+      & ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        & li {
+
+          & div {
+            display: flex;            
+            flex-direction: column;
+            & h3 {
+              text-transform: uppercase;
+              font-weight: 600;
+              font-size: 1rem;
+              color:rgb(41, 41, 41);
+            }
+            & ul {
+              display: flex;            
+              flex-direction: column;
+              
+              & li {
+                padding-top: 16px;
+                & a {
+                  font-size: 0.65rem; 
+                  color: rgb(66, 66, 66);
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

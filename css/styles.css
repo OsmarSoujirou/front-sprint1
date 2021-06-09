@@ -30,6 +30,7 @@ body {
 .container {
   width: 91.4%;
   display: flex;
+  justify-content: space-between;
 }
 
 a {
@@ -453,10 +454,9 @@ p {
 }
 .footer__firstline {
   display: flex;
-  align-items: center;
-  width: 91.4%;
+  width: 100%;
   height: 35px;
-  justify-content: space-between;
+  justify-content: center;
 }
 .footer__firstline__offers {
   width: 70%;
@@ -561,6 +561,74 @@ p {
 }
 .footer__firstline__mobile-apps img {
   height: 100%;
+}
+.footer__secondline {
+  margin-top: 1.8rem;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  width: 100%;
+  display: flex;
+  background: #f1f1f1;
+  justify-content: center;
+}
+.footer__secondline__contacts {
+  height: 100%;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: 22%;
+  display: flex;
+  flex-grow: 0;
+  flex-basis: 22%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.footer__secondline__contacts div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__secondline__contacts div img {
+  height: 25px !important;
+}
+.footer__secondline__contacts div p {
+  text-align: center;
+  padding: 8px;
+  white-space: pre-line;
+  line-height: 1.2rem;
+}
+.footer__secondline__links {
+  width: 72%;
+  flex-basis: 72%;
+  margin-top: 3rem;
+}
+.footer__secondline__links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.footer__secondline__links ul li div {
+  display: flex;
+  flex-direction: column;
+}
+.footer__secondline__links ul li div h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #292929;
+}
+.footer__secondline__links ul li div ul {
+  display: flex;
+  flex-direction: column;
+}
+.footer__secondline__links ul li div ul li {
+  padding-top: 16px;
+}
+.footer__secondline__links ul li div ul li a {
+  font-size: 0.65rem;
+  color: #424242;
 }
 
 /*# sourceMappingURL=styles.css.map */
