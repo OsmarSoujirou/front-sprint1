@@ -630,5 +630,75 @@ p {
   font-size: 0.65rem;
   color: #424242;
 }
+.footer .footer__thirdline {
+  font-weight: 700;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+.footer .footer__thirdline__payment {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer__thirdline__payment h3 {
+  margin-bottom: 10px;
+}
+.footer .footer__thirdline__payment div img {
+  margin-right: 5px;
+}
+.footer .footer__thirdline__social {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer__thirdline__social h3 {
+  margin-bottom: 10px;
+}
+.footer .footer__thirdline__social__img {
+  margin-right: 15px;
+}
+.footer .footer__thirdline__social div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer .footer__thirdline__social div img {
+  height: 22px;
+  width: 22px;
+}
+.footer .footer__thirdline__social div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 5px;
+}
+.footer .footer__thirdline__social div div p {
+  font-size: 0.6rem;
+  font-weight: 300;
+}
+.footer .footer__thirdline__accessibility {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 0.9rem;
+}
+.footer .footer__thirdline__accessibility h3 {
+  margin-bottom: 10px;
+}
+.footer .footer__thirdline__accessibility img {
+  height: 22px;
+  width: 22px;
+}
 
 /*# sourceMappingURL=styles.css.map */
