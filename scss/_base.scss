@@ -21,13 +21,19 @@
     font-weight: 700;
  }
 
- body{
+ body {
     font-family: "Arboria-import", sans-serif;
   }
-  ::placeholder{
+  ::placeholder {
     color: rgb(175, 175, 175);
   }
   .container {
     width: 91.4%;
     display: flex; 
+  }
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
   }

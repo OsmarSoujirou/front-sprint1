@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Arboria-import";
   src: url(/assets/Arboria/Arboria-Light.ttf);
@@ -29,6 +30,12 @@ body {
 .container {
   width: 91.4%;
   display: flex;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 @media (max-width: 767.98px) {
@@ -244,6 +251,132 @@ body {
 }
 .header__menu__list__link a:hover {
   border-bottom: 2px solid #000;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.main__container {
+  width: 83%;
+}
+.main__container__breadcrumbs {
+  padding: 1rem 0;
+  color: #1a1a1a;
+  font-size: 0.78rem;
+  font-family: "Arboria-import", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.main__container__breadcrumbs nav ol {
+  margin: 0;
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+}
+.main__container__breadcrumbs nav ol li {
+  margin-right: 15px;
+}
+.main__container__breadcrumbs nav ol li:not(:last-child):after {
+  content: " /";
+  position: relative;
+  left: 6px;
+}
+.main__container__breadcrumbs nav ol li a {
+  color: #575656;
+}
+.main__container__breadcrumbs nav ol li a:hover {
+  border-bottom: 1px solid #111111;
+}
+.main__container__filters {
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+}
+.main__container__filters ul {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+}
+.main__container__filters ul li {
+  padding: 15.5px 10px;
+  padding-right: 21.5px;
+  cursor: pointer;
+}
+.main__container__filters ul li:hover {
+  background: #f1f1f1;
+}
+.main__container__filters ul li::after {
+  content: "˅";
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  left: 15px;
+  bottom: -5.5px;
+  font-family: monospace;
+}
+.main__container__products {
+  width: calc(100% + 16px);
+  margin: -8px;
+}
+.main__container__products ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% + 16px);
+  margin: -8px;
+}
+.main__container__products ol li {
+  flex-grow: 0;
+  max-width: 25%;
+  flex-basis: 25%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.main__container__products ol li div {
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-top: 16px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+.main__container__products ol li div:hover {
+  border: 1px solid #f1f1f1;
+  border-bottom: 1px solid #1a1a1a;
+}
+.main__container__products ol li div img {
+  max-width: 100%;
+  min-width: 200px;
+}
+.main__container__products ol li div p {
+  color: rgba(0, 0, 0, 0.87);
+  margin-top: 8px;
+  min-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-family: "Arboria-import", sans-serif;
+  font-weight: 600;
+  line-height: 1.43;
+}
+.main__container__products ol li div p:nth-child(2) {
+  color: #666565 !important;
+  font-size: 0.6875rem;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */
