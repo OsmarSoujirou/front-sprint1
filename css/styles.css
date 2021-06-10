@@ -145,6 +145,9 @@ p {
 }
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .header {
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
     padding-bottom: 8px;
   }
 }
@@ -257,19 +260,53 @@ p {
   flex-shrink: 0;
   user-select: none;
 }
-@media (max-width: 767.98px) {
-  .header__menu {
-    display: none !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 1199.98px) {
-  .header__menu {
-    display: none !important;
-  }
-}
 @media (min-width: 1200px) {
   .header__menu {
     display: block !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .header__menu--close {
+    position: fixed;
+    background: #fff;
+    width: 60%;
+    z-index: 999999;
+    top: 108px;
+    left: -100%;
+    height: calc(100% - 108px);
+    overflow: auto;
+  }
+  .header__menu--open {
+    position: fixed;
+    background: #fff;
+    width: 60%;
+    z-index: 999999;
+    top: 108px;
+    left: 0;
+    height: calc(100% - 108px);
+    overflow: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .header__menu--close {
+    position: fixed;
+    background: #fff;
+    width: 50%;
+    z-index: 999999;
+    top: 108px;
+    left: -100%;
+    height: calc(100% - 108px);
+    overflow: auto;
+  }
+  .header__menu--open {
+    position: fixed;
+    background: #fff;
+    width: 50%;
+    z-index: 999999;
+    top: 108px;
+    left: 0;
+    height: calc(100% - 108px);
+    overflow: auto;
   }
 }
 .header__menu__list {
@@ -281,10 +318,53 @@ p {
   margin-top: 16px;
   margin-bottom: 16px;
 }
+@media (max-width: 767.98px) {
+  .header__menu__list {
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .header__menu__list {
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+}
 .header__menu__list__link {
   font-size: 0.8125rem;
   font-weight: 600;
   line-height: 1.5;
+}
+@media (max-width: 767.98px) {
+  .header__menu__list__link {
+    padding: 1rem;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 0.7rem;
+  }
+  .header__menu__list__link::after {
+    content: ">";
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+    font-size: 1rem;
+    font-family: cursive;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .header__menu__list__link {
+    padding: 1rem;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  .header__menu__list__link::after {
+    content: ">";
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+    font-size: 1rem;
+    font-family: cursive;
+  }
 }
 .header__menu__list__link a {
   text-decoration: none;

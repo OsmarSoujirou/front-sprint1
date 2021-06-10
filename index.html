@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <script>
+
       document.write(
         '<script src="http://' +
           (location.host || "localhost").split(":")[0] +
@@ -17,17 +18,26 @@
       );
 
       function switch__menu(ele_) {
-        var pre_ = 'header__logo__menu';
+        var pre_logo_menu = 'header__logo__menu';
+        var pre_menu = 'header__menu';
+        var ele__menu = document.getElementsByClassName('header__menu')[0];
         
-        if( ele_.classList.item(0) == pre_+'--close'){
-          ele_.classList.remove(pre_+'--close');
-          ele_.classList.add(pre_+'--open');
+        if( ele_.classList.item(0) == pre_logo_menu+'--close'){
+          ele_.classList.remove(pre_logo_menu+'--close');
+          ele_.classList.add(pre_logo_menu+'--open');
+          
+          ele__menu.classList.remove(pre_menu+'--close');
+          ele__menu.classList.add(pre_menu+'--open');
+
         } else {
-          ele_.classList.remove(pre_+'--open');
-          ele_.classList.add(pre_+'--close');
-        }        
-        
+          ele_.classList.remove(pre_logo_menu+'--open');
+          ele_.classList.add(pre_logo_menu+'--close');
+
+          ele__menu.classList.remove(pre_menu+'--open');
+          ele__menu.classList.add(pre_menu+'--close');
+        }    
     }
+
     </script>
   </head>
   <body>
@@ -46,7 +56,7 @@
         </div>          
         <input type="search" placeholder="O que você está procurando?" class="header__search__input"/>
       </div>
-      <nav class="header__menu container">
+      <nav class="header__menu header__menu--close container">
         <ul class="header__menu__list">
           <li class="header__menu__list__link"><a href="">Novidades</a></li>
           <li class="header__menu__list__link"><a href="">Feminimo</a></li>
