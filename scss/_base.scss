@@ -41,3 +41,15 @@
   p {
     font-family: "Arboria-import", sans-serif;
   }
+
+  .disabled {
+
+    display: none !important;
+    
+  }
+  .disabled_li {
+    @include for-phone-only { display: none !important;}
+    @include for-tablet-only { display: none !important;}
+    
+    
+  }

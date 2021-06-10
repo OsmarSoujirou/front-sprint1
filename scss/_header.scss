@@ -15,9 +15,7 @@
     @include for-tablet-only {
       padding-bottom: 8px;
     }    
-    .disabled {
-      display: none;
-    }
+
     &__logo {
     justify-content: center;
     height: 60px;
