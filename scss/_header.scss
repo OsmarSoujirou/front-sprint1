@@ -29,20 +29,37 @@
         position: absolute;
         left: 6%;
         cursor: pointer;
-        & > img {
-          width: 2rem;        
-          filter: invert(30%) sepia(1%) saturate(1549%) hue-rotate(33deg) brightness(88%) contrast(79%);
-     
-        } 
-        &::after{
-          bottom: -6px;
-          left: 1.2px;
-          content: "menu";
-          display: block;
-          position: absolute;
-          font-size: 0.7rem;
-          color: #4F4F4F;
+        &--close {
+          width: 2rem;
+          height: 2rem;
+          background: url(../assets/menu.svg);        
+          //filter: invert(30%) sepia(1%) saturate(1549%) hue-rotate(33deg) brightness(88%) contrast(79%);
+          &::after{
+            bottom: -6px;
+            left: 1.2px;
+            content: "menu";
+            display: block;
+            position: absolute;
+            font-size: 0.7rem;
+            color: #4F4F4F;
+          }
         }
+        &--open {
+          width: 2rem;
+          height: 2rem;
+          background: url(../assets/close.svg);        
+          //filter: invert(30%) sepia(1%) saturate(1549%) hue-rotate(33deg) brightness(88%) contrast(79%);
+          &::after{
+            bottom: -6px;
+            left: 1.2px;
+            content: "fechar";
+            display: block;
+            position: absolute;
+            font-size: 0.7rem;
+            color: #4F4F4F;
+          }
+        }
+        
     }
     }
     &__search {

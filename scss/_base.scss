@@ -23,7 +23,11 @@
 
  body {
     font-family: "Arboria-import", sans-serif;
+    
   }
+  * {
+    transition: all 0.15s linear;
+    }
   ::placeholder {
     color: rgb(175, 175, 175);
   }

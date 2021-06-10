@@ -87,6 +87,10 @@ body {
   font-family: "Arboria-import", sans-serif;
 }
 
+* {
+  transition: all 0.15s linear;
+}
+
 ::placeholder {
   color: #afafaf;
 }
@@ -169,14 +173,29 @@ p {
   left: 6%;
   cursor: pointer;
 }
-.header__logo__menu > img {
+.header__logo__menu--close {
   width: 2rem;
-  filter: invert(30%) sepia(1%) saturate(1549%) hue-rotate(33deg) brightness(88%) contrast(79%);
+  height: 2rem;
+  background: url(../assets/menu.svg);
 }
-.header__logo__menu::after {
+.header__logo__menu--close::after {
   bottom: -6px;
   left: 1.2px;
   content: "menu";
+  display: block;
+  position: absolute;
+  font-size: 0.7rem;
+  color: #4F4F4F;
+}
+.header__logo__menu--open {
+  width: 2rem;
+  height: 2rem;
+  background: url(../assets/close.svg);
+}
+.header__logo__menu--open::after {
+  bottom: -6px;
+  left: 1.2px;
+  content: "fechar";
   display: block;
   position: absolute;
   font-size: 0.7rem;

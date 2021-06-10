@@ -15,14 +15,27 @@
           ':35729/livereload.js?snipver=1"></' +
           "script>"
       );
+
+      function switch__menu(ele_) {
+        var pre_ = 'header__logo__menu';
+        
+        if( ele_.classList.item(0) == pre_+'--close'){
+          ele_.classList.remove(pre_+'--close');
+          ele_.classList.add(pre_+'--open');
+        } else {
+          ele_.classList.remove(pre_+'--open');
+          ele_.classList.add(pre_+'--close');
+        }        
+        
+    }
     </script>
   </head>
   <body>
     <header class="header"> 
       <div class="header__logo container">
         <div class="header__logo__menu mobile-tablet">
-          <img src="assets/menu.svg" alt="Menu Mobile" class="header__logo__menu__img" />
-          <img src="assets/close.svg" alt="Menu Mobile" class="header__logo__menu__img disabled" />
+          <div onclick="javascript:switch__menu(this)" class="header__logo__menu--close"></div>
+          
         </div>        
         <img src="assets/riachuelo.svg" alt="Logo Riachuelo" class="header__logo__img desktop" />
         <img src="assets/rchlo.svg" alt="Logo Rchlo" class="header__logo__img mobile-tablet" />
