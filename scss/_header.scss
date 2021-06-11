@@ -35,7 +35,8 @@
         &--close {
           width: 2rem;
           height: 2rem;
-          background: url(../assets/menu.svg);        
+          background: url(../assets/menu.svg); 
+          opacity: 0.6;      
           //filter: invert(30%) sepia(1%) saturate(1549%) hue-rotate(33deg) brightness(88%) contrast(79%);
           &::after{
             bottom: -6px;
@@ -50,7 +51,8 @@
         &--open {
           width: 2rem;
           height: 2rem;
-          background: url(../assets/close.svg);        
+          background: url(../assets/close.svg); 
+          opacity: 0.6;       
           //filter: invert(30%) sepia(1%) saturate(1549%) hue-rotate(33deg) brightness(88%) contrast(79%);
           &::after{
             bottom: -6px;
@@ -122,10 +124,8 @@
       
     }
     
-    &__menu {
-      
-      //@include for-phone-only {   display: none !important;     }
-      //@include for-tablet-only {   display: none !important;   }
+    &__menu {      
+    
       @include for-desktop-only {   display: block !important;   }
       @include for-phone-only { 
         &--close {

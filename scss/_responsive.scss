@@ -3,22 +3,22 @@
  @mixin for-tablet-only { @media (min-width: 768px) and (max-width: 1199.98px) { @content;} }
  @mixin for-desktop-only { @media (min-width: 1200px){ @content;} }
  
-.mobile{
+.mobile {
   @include for-phone-only {   display: inherit !important;   }
   @include for-tablet-only {   display: none !important;   }
   @include for-desktop-only {   display: none !important;   }
 }
-.tablet{
+.tablet {
   @include for-phone-only {   display: none !important;   }
   @include for-tablet-only {   display: inherit !important;  }
   @include for-desktop-only {   display: none !important;   }
 }
-.desktop{
+.desktop {
   @include for-phone-only {   display: none !important;   }
   @include for-tablet-only {   display: none !important;   }
   @include for-desktop-only {   display: inherit !important;   }
 }
-.mobile-tablet{
+.mobile-tablet {
   @include for-phone-only {   display: inherit !important;   }
   @include for-tablet-only {   display: inherit !important;  }
   @include for-desktop-only {   display: none !important;   }

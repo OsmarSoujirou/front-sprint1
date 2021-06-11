@@ -180,6 +180,7 @@ p {
   width: 2rem;
   height: 2rem;
   background: url(../assets/menu.svg);
+  opacity: 0.6;
 }
 .header__logo__menu--close::after {
   bottom: -6px;
@@ -194,6 +195,7 @@ p {
   width: 2rem;
   height: 2rem;
   background: url(../assets/close.svg);
+  opacity: 0.6;
 }
 .header__logo__menu--open::after {
   bottom: -6px;
@@ -467,6 +469,8 @@ p {
   padding: 15.5px 10px;
   padding-right: 21.5px;
   cursor: pointer;
+  color: dimgray;
+  font-weight: 500;
 }
 .main__container__filters ul li:hover {
   background: #f1f1f1;
@@ -474,6 +478,7 @@ p {
 .main__container__filters ul li::after {
   content: "˅";
   font-size: 1rem;
+  color: #363636;
   font-weight: 600;
   position: relative;
   left: 15px;

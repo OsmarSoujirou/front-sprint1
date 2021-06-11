@@ -66,12 +66,15 @@
               padding: 15.5px 10px;
               padding-right: 21.5px;
               cursor: pointer;
+              color: rgb(105, 105, 105);
+              font-weight: 500;
               &:hover{
                 background: rgb(241, 241, 241);
               }
               &::after{        
                 content: "˅";
                 font-size: 1rem;
+                color: rgb(54, 54, 54);
                 font-weight: 600;
                 position: relative;
                 left: 15px;
